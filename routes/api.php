@@ -58,11 +58,4 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('add-admin/{id}', [RoleController::class,'addAdmin']);
         Route::post('add-user/{id}', [RoleController::class,'addUser']);
     });
-
-    // Route::group(['controller' => CategoryController::class], function (){
-    //     Route::get('categories','index');
-    //     Route::post('category','store');
-    //     Route::put('category/{id}','update');
-    //     Route::delete('category/{id}','destroy');
-    // });
 });
