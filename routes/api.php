@@ -31,7 +31,7 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout']);
 Route::post('refresh', [AuthController::class, 'refresh']);
 Route::post('forgot', [ResetPasswordController::class, 'forgot']);
-Route::post('reset/{token}', [ResetPasswordController::class, 'reset']);
+Route::post('reset/{token}', [ResetPasswordController::class, 'reset'])->name('reset.password.post');
 
 // Routes that require authentication
 Route::group(['middleware' => ['auth']], function () {
